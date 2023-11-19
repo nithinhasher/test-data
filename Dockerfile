@@ -20,5 +20,7 @@ RUN apt-get update && apt-get install -y awscli
 RUN rm -rf /var/lib/apt/lists/*
 
 EXPOSE 80
+
+RUN chmod +x ./run.sh
 # Set the default command to run your application
-CMD ["sh", "./run.sh"]
+CMD ["/bin/sh", "./run.sh"]
